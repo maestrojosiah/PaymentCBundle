@@ -1,10 +1,8 @@
 {
     "name": "maestrojosiah/paymentcbundle",
     "type": "symfony-bundle",
-    "description": "A unified API for processing payments with Symfony",
     "keywords": ["payment"],
-    "homepage": "http://maestrojosiahpaymentcorebundle.readthedocs.io",
-    "license": "Apache2",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Josiah Birai",
