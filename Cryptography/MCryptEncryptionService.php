@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Cryptography;
+namespace Maestrojosiah\Payment\CoreBundle\Cryptography;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>
@@ -46,7 +46,7 @@ class MCryptEncryptionService implements EncryptionServiceInterface
             throw new \RuntimeException('The mcrypt extension must be loaded.');
         }
 
-        @trigger_error('mcrypt has been deprecated in PHP 7.1 and is removed in PHP 7.2. Refer to http://jmspaymentcorebundle.readthedocs.io/en/stable/guides/mcrypt.html for instructions on how to migrate away from mcrypt', E_USER_DEPRECATED);
+        @trigger_error('mcrypt has been deprecated in PHP 7.1 and is removed in PHP 7.2. Refer to http://maestrojosiahpaymentcorebundle.readthedocs.io/en/stable/guides/mcrypt.html for instructions on how to migrate away from mcrypt', E_USER_DEPRECATED);
 
         if (!in_array($cipher, @mcrypt_list_algorithms(), true)) {
             throw new \InvalidArgumentException(sprintf('The cipher "%s" is not supported.', $cipher));

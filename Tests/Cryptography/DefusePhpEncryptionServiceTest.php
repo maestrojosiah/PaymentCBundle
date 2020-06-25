@@ -1,8 +1,8 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Cryptography;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Cryptography;
 
-use JMS\Payment\CoreBundle\Cryptography\DefusePhpEncryptionService;
+use Maestrojosiah\Payment\CoreBundle\Cryptography\DefusePhpEncryptionService;
 
 class DefusePhpEncryptionServiceTest extends \PHPUnit_Framework_TestCase
 {

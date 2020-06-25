@@ -1,20 +1,20 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Entity;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Entity;
 
 use Doctrine\DBAL\Types\Type;
-use JMS\Payment\CoreBundle\Cryptography\DefusePhpEncryptionService;
-use JMS\Payment\CoreBundle\Entity\ExtendedData;
-use JMS\Payment\CoreBundle\Entity\ExtendedDataType;
+use Maestrojosiah\Payment\CoreBundle\Cryptography\DefusePhpEncryptionService;
+use Maestrojosiah\Payment\CoreBundle\Entity\ExtendedData;
+use Maestrojosiah\Payment\CoreBundle\Entity\ExtendedDataType;
 
 class ExtendedDataTypeTest extends \PHPUnit_Framework_TestCase
 {
     protected function setUp()
     {
         if (Type::hasType(ExtendedDataType::NAME)) {
-            Type::overrideType(ExtendedDataType::NAME, 'JMS\Payment\CoreBundle\Entity\ExtendedDataType');
+            Type::overrideType(ExtendedDataType::NAME, 'Maestrojosiah\Payment\CoreBundle\Entity\ExtendedDataType');
         } else {
-            Type::addType(ExtendedDataType::NAME, 'JMS\Payment\CoreBundle\Entity\ExtendedDataType');
+            Type::addType(ExtendedDataType::NAME, 'Maestrojosiah\Payment\CoreBundle\Entity\ExtendedDataType');
         }
     }
 

@@ -1,4 +1,4 @@
-JMSPaymentCoreBundle
+MaestrojosiahPaymentCoreBundle
 ====================
 A unified API for processing payments with Symfony
 

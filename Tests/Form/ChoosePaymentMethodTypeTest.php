@@ -1,10 +1,10 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Form\ChoosePaymentMethodTypeTest;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Form\ChoosePaymentMethodTypeTest;
 
-use JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType;
-use JMS\Payment\CoreBundle\Tests\Functional\TestPlugin\Form\TestPluginType;
-use JMS\Payment\CoreBundle\Util\Legacy;
+use Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType;
+use Maestrojosiah\Payment\CoreBundle\Tests\Functional\TestPlugin\Form\TestPluginType;
+use Maestrojosiah\Payment\CoreBundle\Util\Legacy;
 use Symfony\Component\Form\PreloadedExtension;
 use Symfony\Component\Form\Test\TypeTestCase;
 use Symfony\Component\HttpKernel\Kernel;
@@ -50,7 +50,7 @@ class ChoosePaymentMethodTypeTest extends TypeTestCase
             $config = $form->get('data_'.$method)->getConfig();
 
             $this->assertInstanceOf(
-                'JMS\Payment\CoreBundle\Tests\Functional\TestPlugin\Form\TestPluginType',
+                'Maestrojosiah\Payment\CoreBundle\Tests\Functional\TestPlugin\Form\TestPluginType',
                 $config->getType()->getInnerType()
             );
         }
@@ -174,8 +174,8 @@ class ChoosePaymentMethodTypeTest extends TypeTestCase
         ), $options);
 
         $form = Legacy::supportsFormTypeClass()
-            ? 'JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType'
-            : 'jms_choose_payment_method'
+            ? 'Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType'
+            : 'maestrojosiah_choose_payment_method'
         ;
 
         $form = $this->factory->create($form, null, $options);
@@ -186,7 +186,7 @@ class ChoosePaymentMethodTypeTest extends TypeTestCase
 
     protected function setUp()
     {
-        $this->pluginController = $this->getMockBuilder('JMS\Payment\CoreBundle\PluginController\PluginControllerInterface')
+        $this->pluginController = $this->getMockBuilder('Maestrojosiah\Payment\CoreBundle\PluginController\PluginControllerInterface')
             ->getMock();
 
         parent::setUp();

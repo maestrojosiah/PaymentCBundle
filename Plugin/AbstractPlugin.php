@@ -1,10 +1,10 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Plugin;
+namespace Maestrojosiah\Payment\CoreBundle\Plugin;
 
-use JMS\Payment\CoreBundle\Model\FinancialTransactionInterface;
-use JMS\Payment\CoreBundle\Model\PaymentInstructionInterface;
-use JMS\Payment\CoreBundle\Plugin\Exception\FunctionNotSupportedException;
+use Maestrojosiah\Payment\CoreBundle\Model\FinancialTransactionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInstructionInterface;
+use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\FunctionNotSupportedException;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>

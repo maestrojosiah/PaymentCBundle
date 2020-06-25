@@ -1,8 +1,8 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\DependencyInjection\Configuration;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\DependencyInjection\Configuration;
 
-use JMS\Payment\CoreBundle\DependencyInjection\Configuration;
+use Maestrojosiah\Payment\CoreBundle\DependencyInjection\Configuration;
 use Matthias\SymfonyConfigTest\PhpUnit\AbstractConfigurationTestCase;
 
 class ConfigurationTest extends AbstractConfigurationTestCase
@@ -113,7 +113,7 @@ class ConfigurationTest extends AbstractConfigurationTestCase
 
     protected function getConfiguration()
     {
-        return new Configuration('jms_payment_core');
+        return new Configuration('maestrojosiah_payment_core');
     }
 
     protected function assertConfigurationIsInvalid(array $config, $expected = null, $useRegExp = false)

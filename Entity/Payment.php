@@ -1,10 +1,10 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Entity;
+namespace Maestrojosiah\Payment\CoreBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use JMS\Payment\CoreBundle\Model\FinancialTransactionInterface;
-use JMS\Payment\CoreBundle\Model\PaymentInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\FinancialTransactionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInterface;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>
@@ -35,7 +35,7 @@ class Payment implements PaymentInterface
     private $id;
 
     /**
-     * @var \JMS\Payment\CoreBundle\Entity\PaymentInstruction
+     * @var \Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction
      */
     private $paymentInstruction;
 
@@ -46,7 +46,7 @@ class Payment implements PaymentInterface
     private $targetAmount;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection|\JMS\Payment\CoreBundle\Entity\FinancialTransaction[]
+     * @var \Doctrine\Common\Collections\ArrayCollection|\Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction[]
      */
     private $transactions;
 
@@ -88,7 +88,7 @@ class Payment implements PaymentInterface
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Entity\FinancialTransaction|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction|null
      */
     public function getApproveTransaction()
     {
@@ -130,7 +130,7 @@ class Payment implements PaymentInterface
     }
 
     /**
-     * @return \Doctrine\Common\Collections\Collection|\JMS\Payment\CoreBundle\Entity\FinancialTransaction[]
+     * @return \Doctrine\Common\Collections\Collection|\Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction[]
      */
     public function getDepositTransactions()
     {
@@ -150,7 +150,7 @@ class Payment implements PaymentInterface
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Entity\PaymentInstruction
+     * @return \Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction
      */
     public function getPaymentInstruction()
     {
@@ -158,7 +158,7 @@ class Payment implements PaymentInterface
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Entity\FinancialTransaction|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction|null
      */
     public function getPendingTransaction()
     {
@@ -172,7 +172,7 @@ class Payment implements PaymentInterface
     }
 
     /**
-     * @return \Doctrine\Common\Collections\Collection|\JMS\Payment\CoreBundle\Entity\FinancialTransaction[]
+     * @return \Doctrine\Common\Collections\Collection|\Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction[]
      */
     public function getReverseApprovalTransactions()
     {
@@ -182,7 +182,7 @@ class Payment implements PaymentInterface
     }
 
     /**
-     * @return \Doctrine\Common\Collections\Collection|\JMS\Payment\CoreBundle\Entity\FinancialTransaction[]
+     * @return \Doctrine\Common\Collections\Collection|\Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction[]
      */
     public function getReverseDepositTransactions()
     {
@@ -217,7 +217,7 @@ class Payment implements PaymentInterface
     }
 
     /**
-     * @return \Doctrine\Common\Collections\ArrayCollection|\JMS\Payment\CoreBundle\Entity\FinancialTransaction[]
+     * @return \Doctrine\Common\Collections\ArrayCollection|\Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction[]
      */
     public function getTransactions()
     {

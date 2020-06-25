@@ -1,10 +1,10 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Form\Transformer;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Form\Transformer;
 
-use JMS\Payment\CoreBundle\Entity\ExtendedData;
-use JMS\Payment\CoreBundle\Entity\PaymentInstruction;
-use JMS\Payment\CoreBundle\Form\Transformer\ChoosePaymentMethodTransformer;
+use Maestrojosiah\Payment\CoreBundle\Entity\ExtendedData;
+use Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction;
+use Maestrojosiah\Payment\CoreBundle\Form\Transformer\ChoosePaymentMethodTransformer;
 
 class ChoosePaymentMethodTransformerTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,7 +15,7 @@ class ChoosePaymentMethodTransformerTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @expectedException Symfony\Component\Form\Exception\TransformationFailedException
-     * @expectedExceptionMessage JMS\Payment\CoreBundle\Tests\Form\Transformer\ChoosePaymentMethodTransformerTest
+     * @expectedExceptionMessage Maestrojosiah\Payment\CoreBundle\Tests\Form\Transformer\ChoosePaymentMethodTransformerTest
      */
     public function testTransformNotPaymentInstructionObject()
     {
@@ -64,7 +64,7 @@ class ChoosePaymentMethodTransformerTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @expectedException Symfony\Component\Form\Exception\TransformationFailedException
-     * @expectedExceptionMessage JMS\Payment\CoreBundle\Tests\Form\Transformer\ChoosePaymentMethodTransformerTest
+     * @expectedExceptionMessage Maestrojosiah\Payment\CoreBundle\Tests\Form\Transformer\ChoosePaymentMethodTransformerTest
      */
     public function testReverseTransformNotArray()
     {
@@ -98,7 +98,7 @@ class ChoosePaymentMethodTransformerTest extends \PHPUnit_Framework_TestCase
 
         $pi = $this->reverseTransform(array('method' => 'foo'), $options);
 
-        $this->assertInstanceOf('JMS\Payment\CoreBundle\Entity\PaymentInstruction', $pi);
+        $this->assertInstanceOf('Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction', $pi);
         $this->assertEquals('foo', $pi->getPaymentSystemName());
         $this->assertEquals('10.42', $pi->getAmount());
         $this->assertEquals('EUR', $pi->getCurrency());
@@ -120,7 +120,7 @@ class ChoosePaymentMethodTransformerTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @expectedException Symfony\Component\Form\Exception\TransformationFailedException
-     * @expectedExceptionMessage JMS\Payment\CoreBundle\Tests\Form\Transformer\ChoosePaymentMethodTransformerTest
+     * @expectedExceptionMessage Maestrojosiah\Payment\CoreBundle\Tests\Form\Transformer\ChoosePaymentMethodTransformerTest
      */
     public function testReverseTransformPredefinedDataWrongType()
     {

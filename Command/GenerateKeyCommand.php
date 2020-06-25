@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Command;
+namespace Maestrojosiah\Payment\CoreBundle\Command;
 
 use Defuse\Crypto\Key;
 use Symfony\Component\Console\Command\Command;
@@ -12,7 +12,7 @@ class GenerateKeyCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('jms_payment_core:generate-key')
+            ->setName('maestrojosiah_payment_core:generate-key')
             ->setDescription('Generate an encryption key')
         ;
     }

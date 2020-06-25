@@ -30,7 +30,7 @@ Here's the full code for a minimal ``Order`` entity:
     namespace App\Entity;
 
     use Doctrine\ORM\Mapping as ORM;
-    use JMS\Payment\CoreBundle\Entity\PaymentInstruction;
+    use Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction;
 
     /**
      * @ORM\Table(name="orders")
@@ -46,7 +46,7 @@ Here's the full code for a minimal ``Order`` entity:
         private $id;
 
         /**
-         * @ORM\OneToOne(targetEntity="JMS\Payment\CoreBundle\Entity\PaymentInstruction")
+         * @ORM\OneToOne(targetEntity="Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction")
          */
         private $paymentInstruction;
 
@@ -164,7 +164,7 @@ Once the ``Order`` has been created, the next step in our *Checkout* process is 
     // src/App/Controller/OrdersController.php
 
     use App\Entity\Order;
-    use JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType;
+    use Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType;
     use Symfony\Component\Routing\Annotation\Route;
     use Symfony\Component\HttpFoundation\Request;
 
@@ -194,7 +194,7 @@ Once the ``Order`` has been created, the next step in our *Checkout* process is 
 
         // src/AppBundle/Controller/OrdersController.php
 
-        $form = $this->createForm('jms_choose_payment_method', null, [
+        $form = $this->createForm('maestrojosiah_choose_payment_method', null, [
             'amount'   => $order->getAmount(),
             'currency' => 'EUR',
         ]);
@@ -234,7 +234,7 @@ Note that no remote calls to the payment backend are made in this action, we're 
     // src/App/Controller/OrdersController.php
 
     use App\Entity\Order;
-    use JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType;
+    use Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType;
     use Symfony\Component\Routing\Annotation\Route;
     use Symfony\Component\HttpFoundation\Request;
 
@@ -283,7 +283,7 @@ Let's start by creating a private method in our controller, which will aid us in
     // src/App/Controller/OrdersController.php
 
     use App\Entity\Order;
-    use JMS\Payment\CoreBundle\PluginController\PluginController;
+    use Maestrojosiah\Payment\CoreBundle\PluginController\PluginController;
 
     private function createPayment(Order $order, PluginController $ppc)
     {
@@ -309,8 +309,8 @@ Now we'll call the ``createPayment`` method we implemented in the previous secti
 
     use App\Entity\Order;
     use Symfony\Component\Routing\Annotation\Route;
-    use JMS\Payment\CoreBundle\PluginController\PluginController;
-    use JMS\Payment\CoreBundle\PluginController\Result;
+    use Maestrojosiah\Payment\CoreBundle\PluginController\PluginController;
+    use Maestrojosiah\Payment\CoreBundle\PluginController\Result;
 
     /**
      * @Route("/{orderId}/payment/create")
@@ -354,9 +354,9 @@ We would add the following to our action:
 
     // src/App/Controller/OrdersController.php
 
-    use JMS\Payment\CoreBundle\Plugin\Exception\Action\VisitUrl;
-    use JMS\Payment\CoreBundle\Plugin\Exception\ActionRequiredException;
-    use JMS\Payment\CoreBundle\PluginController\Result;
+    use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\Action\VisitUrl;
+    use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\ActionRequiredException;
+    use Maestrojosiah\Payment\CoreBundle\PluginController\Result;
 
     if ($result->getStatus() === Result::STATUS_PENDING) {
         $ex = $result->getPluginException();

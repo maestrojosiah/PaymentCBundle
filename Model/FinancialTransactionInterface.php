@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Model;
+namespace Maestrojosiah\Payment\CoreBundle\Model;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>
@@ -35,19 +35,19 @@ interface FinancialTransactionInterface
     const TRANSACTION_TYPE_REVERSE_DEPOSIT = 7;
 
     /**
-     * @return \JMS\Payment\CoreBundle\Model\CreditInterface|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Model\CreditInterface|null
      */
     public function getCredit();
 
     /**
-     * @return \JMS\Payment\CoreBundle\Model\ExtendedDataInterface|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Model\ExtendedDataInterface|null
      */
     public function getExtendedData();
 
     public function getId();
 
     /**
-     * @return \JMS\Payment\CoreBundle\Model\PaymentInterface|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Model\PaymentInterface|null
      */
     public function getPayment();
 

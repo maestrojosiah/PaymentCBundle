@@ -1,30 +1,30 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\PluginController;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\PluginController;
 
-use JMS\Payment\CoreBundle\Entity\Credit;
-use JMS\Payment\CoreBundle\Entity\ExtendedData;
-use JMS\Payment\CoreBundle\Entity\FinancialTransaction;
-use JMS\Payment\CoreBundle\Entity\Payment;
-use JMS\Payment\CoreBundle\Entity\PaymentInstruction;
-use JMS\Payment\CoreBundle\Model\CreditInterface;
-use JMS\Payment\CoreBundle\Model\FinancialTransactionInterface;
-use JMS\Payment\CoreBundle\Model\PaymentInstructionInterface;
-use JMS\Payment\CoreBundle\Model\PaymentInterface;
-use JMS\Payment\CoreBundle\Plugin\Exception\FinancialException;
-use JMS\Payment\CoreBundle\Plugin\Exception\TimeoutException as PluginTimeoutException;
-use JMS\Payment\CoreBundle\Plugin\PluginInterface;
-use JMS\Payment\CoreBundle\PluginController\Event\PaymentInstructionStateChangeEvent;
-use JMS\Payment\CoreBundle\PluginController\Event\PaymentStateChangeEvent;
-use JMS\Payment\CoreBundle\PluginController\PluginController;
-use JMS\Payment\CoreBundle\PluginController\Result;
+use Maestrojosiah\Payment\CoreBundle\Entity\Credit;
+use Maestrojosiah\Payment\CoreBundle\Entity\ExtendedData;
+use Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction;
+use Maestrojosiah\Payment\CoreBundle\Entity\Payment;
+use Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction;
+use Maestrojosiah\Payment\CoreBundle\Model\CreditInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\FinancialTransactionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInstructionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInterface;
+use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\FinancialException;
+use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\TimeoutException as PluginTimeoutException;
+use Maestrojosiah\Payment\CoreBundle\Plugin\PluginInterface;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Event\PaymentInstructionStateChangeEvent;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Event\PaymentStateChangeEvent;
+use Maestrojosiah\Payment\CoreBundle\PluginController\PluginController;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Result;
 
 class PluginControllerTest extends \PHPUnit_Framework_TestCase
 {
     private $dispatcher;
 
     /**
-     * @expectedException JMS\Payment\CoreBundle\PluginController\Exception\InvalidPaymentException
+     * @expectedException Maestrojosiah\Payment\CoreBundle\PluginController\Exception\InvalidPaymentException
      * @dataProvider getInvalidPaymentStatesForDependentCredit
      */
     public function testCreditOnlyAcceptsValidPaymentStatesOnDependentCredit($invalidState)
@@ -193,7 +193,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JMS\Payment\CoreBundle\PluginController\Exception\InvalidCreditException
+     * @expectedException Maestrojosiah\Payment\CoreBundle\PluginController\Exception\InvalidCreditException
      * @dataProvider getInvalidCreditStatesForCredit
      */
     public function testCreditDoesNotAcceptInvalidCreditState($invalidState)
@@ -216,7 +216,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JMS\Payment\CoreBundle\PluginController\Exception\InvalidPaymentInstructionException
+     * @expectedException Maestrojosiah\Payment\CoreBundle\PluginController\Exception\InvalidPaymentInstructionException
      * @dataProvider getInvalidPaymentInstructionStatesForCredit
      */
     public function testCreditDoesNotAcceptInvalidPaymentInstructionState($invalidState)
@@ -258,7 +258,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JMS\Payment\CoreBundle\PluginController\Exception\InvalidPaymentException
+     * @expectedException Maestrojosiah\Payment\CoreBundle\PluginController\Exception\InvalidPaymentException
      * @dataProvider getInvalidPaymentStatesForCreateDependentCredit
      */
     public function testCreateDependentCreditDoesOnlyAcceptValidPayments($invalidState)
@@ -282,7 +282,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JMS\Payment\CoreBundle\PluginController\Exception\InvalidPaymentInstructionException
+     * @expectedException Maestrojosiah\Payment\CoreBundle\PluginController\Exception\InvalidPaymentInstructionException
      * @dataProvider getInvalidInstructionStatesForCreateDependentCredit
      */
     public function testCreateDependentCreditDoesOnlyAcceptValidPaymentInstruction($invalidState)
@@ -336,7 +336,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
 
         $result = $this->callApproveAndDeposit($controller, array($payment, 100));
 
-        $this->assertInstanceOf('JMS\Payment\CoreBundle\PluginController\Result', $result);
+        $this->assertInstanceOf('Maestrojosiah\Payment\CoreBundle\PluginController\Result', $result);
         $this->assertSame($transaction, $result->getFinancialTransaction());
         $this->assertSame(Result::STATUS_SUCCESS, $result->getStatus());
         $this->assertSame(PluginInterface::REASON_CODE_SUCCESS, $result->getReasonCode());
@@ -381,7 +381,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
 
         $result = $this->callApproveAndDeposit($controller, array($payment, 100));
 
-        $this->assertInstanceOf('JMS\Payment\CoreBundle\PluginController\Result', $result);
+        $this->assertInstanceOf('Maestrojosiah\Payment\CoreBundle\PluginController\Result', $result);
         $this->assertSame($transaction, $result->getFinancialTransaction());
         $this->assertSame(Result::STATUS_SUCCESS, $result->getStatus());
         $this->assertSame(PluginInterface::REASON_CODE_SUCCESS, $result->getReasonCode());
@@ -416,7 +416,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
         $result = $this->callApproveAndDeposit($controller, array($payment, 100));
         $transaction = $result->getFinancialTransaction();
 
-        $this->assertInstanceOf('JMS\Payment\CoreBundle\PluginController\Result', $result);
+        $this->assertInstanceOf('Maestrojosiah\Payment\CoreBundle\PluginController\Result', $result);
         $this->assertSame(Result::STATUS_FAILED, $result->getStatus());
         $this->assertSame($transaction->getReasonCode(), $result->getReasonCode());
         $this->assertSame(FinancialTransactionInterface::STATE_FAILED, $transaction->getState());
@@ -471,7 +471,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
         $result = $this->callApproveAndDeposit($controller, array($payment, 100));
         $transaction = $result->getFinancialTransaction();
 
-        $this->assertInstanceOf('JMS\Payment\CoreBundle\PluginController\Result', $result);
+        $this->assertInstanceOf('Maestrojosiah\Payment\CoreBundle\PluginController\Result', $result);
         $this->assertSame(Result::STATUS_PENDING, $result->getStatus());
         $this->assertSame(PluginInterface::REASON_CODE_TIMEOUT, $result->getReasonCode());
         $this->assertSame(PaymentInterface::STATE_APPROVING, $payment->getState());
@@ -523,7 +523,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JMS\Payment\CoreBundle\PluginController\Exception\InvalidPaymentInstructionException
+     * @expectedException Maestrojosiah\Payment\CoreBundle\PluginController\Exception\InvalidPaymentInstructionException
      */
     public function testApproveAndDepositThrowsExceptionWhenPaymentInstructionHasPendingTransaction()
     {
@@ -539,7 +539,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JMS\Payment\CoreBundle\PluginController\Exception\InvalidPaymentException
+     * @expectedException Maestrojosiah\Payment\CoreBundle\PluginController\Exception\InvalidPaymentException
      * @dataProvider getInvalidPaymentStatesForApproval
      */
     public function testApproveAndDepositDoesNotAcceptInvalidPaymentState($invalidState)
@@ -554,7 +554,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JMS\Payment\CoreBundle\PluginController\Exception\InvalidPaymentInstructionException
+     * @expectedException Maestrojosiah\Payment\CoreBundle\PluginController\Exception\InvalidPaymentInstructionException
      * @dataProvider getInvalidInstructionStatesForApproval
      */
     public function testApproveAndDepositDoesNotAcceptInvalidPaymentInstructionState($invalidState)
@@ -595,7 +595,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
 
         $this->assertSame($transaction, $result->getFinancialTransaction());
         $this->assertSame($transaction, $payment->getApproveTransaction());
-        $this->assertInstanceOf('JMS\Payment\CoreBundle\PluginController\Result', $result);
+        $this->assertInstanceOf('Maestrojosiah\Payment\CoreBundle\PluginController\Result', $result);
         $this->assertTrue(PluginInterface::RESPONSE_CODE_SUCCESS === $transaction->getResponseCode());
         $this->assertSame(PluginInterface::RESPONSE_CODE_SUCCESS, $transaction->getResponseCode());
         $this->assertSame(Result::STATUS_SUCCESS, $result->getStatus());
@@ -624,7 +624,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
 
         $result = $this->callApprove($controller, array($payment, 100));
 
-        $this->assertInstanceOf('JMS\Payment\CoreBundle\PluginController\Result', $result);
+        $this->assertInstanceOf('Maestrojosiah\Payment\CoreBundle\PluginController\Result', $result);
         $this->assertSame(Result::STATUS_FAILED, $result->getStatus());
         $this->assertSame(PaymentInterface::STATE_FAILED, $payment->getState());
         $this->assertSame(FinancialTransactionInterface::TRANSACTION_TYPE_APPROVE, $result->getFinancialTransaction()->getTransactionType());
@@ -657,7 +657,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
 
         $result = $this->callApprove($controller, array($payment, 123.45));
 
-        $this->assertInstanceOf('JMS\Payment\CoreBundle\PluginController\Result', $result);
+        $this->assertInstanceOf('Maestrojosiah\Payment\CoreBundle\PluginController\Result', $result);
         $this->assertEquals(123.45, $instruction->getApprovingAmount());
         $this->assertEquals(123.45, $payment->getApprovingAmount());
         $this->assertSame(PaymentInterface::STATE_APPROVING, $payment->getState());
@@ -691,7 +691,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JMS\Payment\CoreBundle\PluginController\Exception\Exception
+     * @expectedException Maestrojosiah\Payment\CoreBundle\PluginController\Exception\Exception
      * @expectedMessage The PaymentInstruction can only ever have one pending transaction.
      */
     public function testApproveDoesNotAcceptNewTransactionIfInstructionHasPendingTransaction()
@@ -710,7 +710,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JMS\Payment\CoreBundle\PluginController\Exception\Exception
+     * @expectedException Maestrojosiah\Payment\CoreBundle\PluginController\Exception\Exception
      * @expectedMessage The Payment's target amount must equal the requested amount in a retry transaction.
      * @dataProvider getApprovalTestAmounts
      */
@@ -736,7 +736,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JMS\Payment\CoreBundle\PluginController\Exception\Exception
+     * @expectedException Maestrojosiah\Payment\CoreBundle\PluginController\Exception\Exception
      * @expectedMessage The Payment's target amount is less than the requested amount.
      */
     public function testApproveAmountCannotBeHigherThanPaymentsIfFirstTry()
@@ -752,7 +752,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JMS\Payment\CoreBundle\PluginController\Exception\Exception
+     * @expectedException Maestrojosiah\Payment\CoreBundle\PluginController\Exception\Exception
      * @expectedMessage The Payment's state must be STATE_NEW, or STATE_PENDING.
      * @dataProvider getInvalidPaymentStatesForApproval
      */
@@ -779,7 +779,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException JMS\Payment\CoreBundle\PluginController\Exception\Exception
+     * @expectedException Maestrojosiah\Payment\CoreBundle\PluginController\Exception\Exception
      * @expectedMessage The PaymentInstruction's state must be STATE_VALID.
      * @dataProvider getInvalidInstructionStatesForApproval
      */
@@ -917,7 +917,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
 
     protected function getPlugin()
     {
-        $plugin = $this->getMockBuilder('JMS\Payment\CoreBundle\Plugin\PluginInterface')->getMock();
+        $plugin = $this->getMockBuilder('Maestrojosiah\Payment\CoreBundle\Plugin\PluginInterface')->getMock();
         $plugin
             ->expects($this->once())
             ->method('processes')
@@ -969,8 +969,8 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
     protected function getController(array $options = array(), $addTransaction = true, $withDispatcher = false)
     {
         $options = array_merge(array(
-            'financial_transaction_class' => 'JMS\Payment\CoreBundle\Entity\FinancialTransaction',
-            'result_class' => 'JMS\Payment\CoreBundle\PluginController\Result',
+            'financial_transaction_class' => 'Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction',
+            'result_class' => 'Maestrojosiah\Payment\CoreBundle\PluginController\Result',
         ), $options);
 
         $args = array($options);
@@ -980,7 +980,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
         }
 
         $mock = $this->getMockForAbstractClass(
-            'JMS\Payment\CoreBundle\PluginController\PluginController',
+            'Maestrojosiah\Payment\CoreBundle\PluginController\PluginController',
             $args
         );
 

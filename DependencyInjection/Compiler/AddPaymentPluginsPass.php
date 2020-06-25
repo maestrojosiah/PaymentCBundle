@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\DependencyInjection\Compiler;
+namespace Maestrojosiah\Payment\CoreBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

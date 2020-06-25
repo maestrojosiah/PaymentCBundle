@@ -1,10 +1,10 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\PluginController;
+namespace Maestrojosiah\Payment\CoreBundle\PluginController;
 
-use JMS\Payment\CoreBundle\Model\FinancialTransactionInterface;
-use JMS\Payment\CoreBundle\Model\PaymentInstructionInterface;
-use JMS\Payment\CoreBundle\Plugin\Exception\Exception as PluginException;
+use Maestrojosiah\Payment\CoreBundle\Model\FinancialTransactionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInstructionInterface;
+use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\Exception as PluginException;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>
@@ -30,22 +30,22 @@ class Result
     const STATUS_UNKNOWN = 4;
 
     /**
-     * @var \JMS\Payment\CoreBundle\Model\CreditInterface|null
+     * @var \Maestrojosiah\Payment\CoreBundle\Model\CreditInterface|null
      */
     protected $credit;
 
     /**
-     * @var \JMS\Payment\CoreBundle\Model\FinancialTransactionInterface|null
+     * @var \Maestrojosiah\Payment\CoreBundle\Model\FinancialTransactionInterface|null
      */
     protected $financialTransaction;
 
     /**
-     * @var \JMS\Payment\CoreBundle\Model\PaymentInterface|null
+     * @var \Maestrojosiah\Payment\CoreBundle\Model\PaymentInterface|null
      */
     protected $payment;
 
     /**
-     * @var \JMS\Payment\CoreBundle\Model\PaymentInstructionInterface
+     * @var \Maestrojosiah\Payment\CoreBundle\Model\PaymentInstructionInterface
      */
     protected $paymentInstruction;
 
@@ -75,7 +75,7 @@ class Result
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Model\FinancialTransactionInterface|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Model\FinancialTransactionInterface|null
      */
     public function getFinancialTransaction()
     {
@@ -93,7 +93,7 @@ class Result
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Model\CreditInterface|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Model\CreditInterface|null
      */
     public function getCredit()
     {
@@ -101,7 +101,7 @@ class Result
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Model\PaymentInterface|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Model\PaymentInterface|null
      */
     public function getPayment()
     {
@@ -109,7 +109,7 @@ class Result
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Model\PaymentInstructionInterface
+     * @return \Maestrojosiah\Payment\CoreBundle\Model\PaymentInstructionInterface
      */
     public function getPaymentInstruction()
     {

@@ -1,8 +1,8 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\DependencyInjection;
+namespace Maestrojosiah\Payment\CoreBundle\DependencyInjection;
 
-use JMS\Payment\CoreBundle\Entity\ExtendedDataType;
+use Maestrojosiah\Payment\CoreBundle\Entity\ExtendedDataType;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
@@ -26,14 +26,14 @@ use Symfony\Component\HttpKernel\Kernel;
  * limitations under the License.
  */
 
-class JMSPaymentCoreExtension extends Extension implements PrependExtensionInterface
+class MaestrojosiahPaymentCoreExtension extends Extension implements PrependExtensionInterface
 {
     public function prepend(ContainerBuilder $container)
     {
         $container->prependExtensionConfig('doctrine', array(
             'dbal' => array(
                 'types' => array(
-                    ExtendedDataType::NAME => 'JMS\Payment\CoreBundle\Entity\ExtendedDataType',
+                    ExtendedDataType::NAME => 'Maestrojosiah\Payment\CoreBundle\Entity\ExtendedDataType',
                 ),
             ),
         ));

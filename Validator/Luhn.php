@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Validator;
+namespace Maestrojosiah\Payment\CoreBundle\Validator;
 
 use Symfony\Component\Validator\Constraint;
 

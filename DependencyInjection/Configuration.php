@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\DependencyInjection;
+namespace Maestrojosiah\Payment\CoreBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

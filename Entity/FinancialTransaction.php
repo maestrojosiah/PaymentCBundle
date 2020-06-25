@@ -1,11 +1,11 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Entity;
+namespace Maestrojosiah\Payment\CoreBundle\Entity;
 
-use JMS\Payment\CoreBundle\Model\CreditInterface;
-use JMS\Payment\CoreBundle\Model\ExtendedDataInterface;
-use JMS\Payment\CoreBundle\Model\FinancialTransactionInterface;
-use JMS\Payment\CoreBundle\Model\PaymentInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\CreditInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\ExtendedDataInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\FinancialTransactionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInterface;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>
@@ -26,24 +26,24 @@ use JMS\Payment\CoreBundle\Model\PaymentInterface;
 class FinancialTransaction implements FinancialTransactionInterface
 {
     /**
-     * @var \JMS\Payment\CoreBundle\Entity\Credit|null
+     * @var \Maestrojosiah\Payment\CoreBundle\Entity\Credit|null
      */
     private $credit;
 
     /**
-     * @var \JMS\Payment\CoreBundle\Entity\ExtendedData|null
+     * @var \Maestrojosiah\Payment\CoreBundle\Entity\ExtendedData|null
      */
     private $extendedData;
 
     /**
-     * @var \JMS\Payment\CoreBundle\Entity\ExtendedData|null
+     * @var \Maestrojosiah\Payment\CoreBundle\Entity\ExtendedData|null
      */
     private $extendedDataOriginal;
 
     private $id;
 
     /**
-     * @var \JMS\Payment\CoreBundle\Entity\Payment|null
+     * @var \Maestrojosiah\Payment\CoreBundle\Entity\Payment|null
      */
     private $payment;
 
@@ -67,7 +67,7 @@ class FinancialTransaction implements FinancialTransactionInterface
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Entity\Credit|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Entity\Credit|null
      */
     public function getCredit()
     {
@@ -75,7 +75,7 @@ class FinancialTransaction implements FinancialTransactionInterface
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Entity\ExtendedData|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Entity\ExtendedData|null
      */
     public function getExtendedData()
     {
@@ -98,7 +98,7 @@ class FinancialTransaction implements FinancialTransactionInterface
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Entity\Payment|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Entity\Payment|null
      */
     public function getPayment()
     {

@@ -1,9 +1,9 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Functional\TestBundle\Entity;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Functional\TestBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use JMS\Payment\CoreBundle\Entity\PaymentInstruction;
+use Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction;
 
 /**
  * @ORM\Entity
@@ -20,7 +20,7 @@ class Order
     /** @ORM\Column(type="decimal", precision = 2) */
     private $amount;
 
-    /** @ORM\OneToOne(targetEntity="JMS\Payment\CoreBundle\Entity\PaymentInstruction") */
+    /** @ORM\OneToOne(targetEntity="Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction") */
     private $paymentInstruction;
 
     public function __construct($amount)

@@ -1,18 +1,18 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\PluginController;
+namespace Maestrojosiah\Payment\CoreBundle\PluginController;
 
 use Doctrine\DBAL\LockMode;
 use Doctrine\ORM\EntityManager;
-use JMS\Payment\CoreBundle\Entity\Payment;
-use JMS\Payment\CoreBundle\Entity\PaymentInstruction;
-use JMS\Payment\CoreBundle\Model\PaymentInstructionInterface;
-use JMS\Payment\CoreBundle\Model\PaymentInterface;
-use JMS\Payment\CoreBundle\Plugin\Exception\FunctionNotSupportedException as PluginFunctionNotSupportedException;
-use JMS\Payment\CoreBundle\Plugin\QueryablePluginInterface;
-use JMS\Payment\CoreBundle\PluginController\Exception\Exception;
-use JMS\Payment\CoreBundle\PluginController\Exception\PaymentInstructionNotFoundException;
-use JMS\Payment\CoreBundle\PluginController\Exception\PaymentNotFoundException;
+use Maestrojosiah\Payment\CoreBundle\Entity\Payment;
+use Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInstructionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInterface;
+use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\FunctionNotSupportedException as PluginFunctionNotSupportedException;
+use Maestrojosiah\Payment\CoreBundle\Plugin\QueryablePluginInterface;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Exception\Exception;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Exception\PaymentInstructionNotFoundException;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Exception\PaymentNotFoundException;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 /*

@@ -1,4 +1,4 @@
 imports:
     - { resource: default.php }
 
-jms_payment_core: ~
+maestrojosiah_payment_core: ~

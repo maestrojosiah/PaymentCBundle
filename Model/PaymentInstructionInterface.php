@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Model;
+namespace Maestrojosiah\Payment\CoreBundle\Model;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>
@@ -32,7 +32,7 @@ interface PaymentInstructionInterface
     public function getCreditingAmount();
 
     /**
-     * @return \JMS\Payment\CoreBundle\Model\CreditInterface[]
+     * @return \Maestrojosiah\Payment\CoreBundle\Model\CreditInterface[]
      */
     public function getCredits();
 
@@ -41,21 +41,21 @@ interface PaymentInstructionInterface
     public function getDepositingAmount();
 
     /**
-     * @return \JMS\Payment\CoreBundle\Model\ExtendedDataInterface
+     * @return \Maestrojosiah\Payment\CoreBundle\Model\ExtendedDataInterface
      */
     public function getExtendedData();
 
     public function getId();
 
     /**
-     * @return \JMS\Payment\CoreBundle\Model\PaymentInterface[]
+     * @return \Maestrojosiah\Payment\CoreBundle\Model\PaymentInterface[]
      */
     public function getPayments();
 
     public function getPaymentSystemName();
 
     /**
-     * @return \JMS\Payment\CoreBundle\Model\FinancialTransactionInterface|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Model\FinancialTransactionInterface|null
      */
     public function getPendingTransaction();
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Functional;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Functional;
 
 use Doctrine\ORM\EntityManager;
-use JMS\Payment\CoreBundle\Tests\Functional\TestBundle\Entity\Order;
-use JMS\Payment\CoreBundle\Util\Number;
+use Maestrojosiah\Payment\CoreBundle\Tests\Functional\TestBundle\Entity\Order;
+use Maestrojosiah\Payment\CoreBundle\Util\Number;
 
 abstract class BasePaymentWorkflowTest extends BaseTestCase
 {
@@ -38,7 +38,7 @@ abstract class BasePaymentWorkflowTest extends BaseTestCase
 
         $crawler = $client->request('GET', $router->generate('payment_details', ['orderId' => $order->getId()]));
         $form = $crawler->selectButton('submit_btn')->form();
-        $form['jms_choose_payment_method[method]']->select('test_plugin');
+        $form['maestrojosiah_choose_payment_method[method]']->select('test_plugin');
         $client->submit($form);
 
         $response = $client->getResponse();

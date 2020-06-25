@@ -1,8 +1,8 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Functional\TestPlugin\Plugin;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Functional\TestPlugin\Plugin;
 
-use JMS\Payment\CoreBundle\Plugin\AbstractPlugin;
+use Maestrojosiah\Payment\CoreBundle\Plugin\AbstractPlugin;
 
 class TestPlugin extends AbstractPlugin
 {

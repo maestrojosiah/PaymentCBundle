@@ -1,8 +1,8 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\PluginController\Event;
+namespace Maestrojosiah\Payment\CoreBundle\PluginController\Event;
 
-use JMS\Payment\CoreBundle\Model\PaymentInstructionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInstructionInterface;
 use Symfony\Component\EventDispatcher\Event;
 
 class PaymentInstructionStateChangeEvent extends Event
@@ -17,7 +17,7 @@ class PaymentInstructionStateChangeEvent extends Event
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Model\PaymentInstructionInterface
+     * @return \Maestrojosiah\Payment\CoreBundle\Model\PaymentInstructionInterface
      */
     public function getPaymentInstruction()
     {

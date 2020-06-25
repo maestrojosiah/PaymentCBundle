@@ -1,8 +1,8 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Plugin;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Plugin;
 
-use JMS\Payment\CoreBundle\Plugin\ErrorBuilder;
+use Maestrojosiah\Payment\CoreBundle\Plugin\ErrorBuilder;
 
 class ErrorBuilderTest extends \PHPUnit_Framework_TestCase
 {
@@ -22,7 +22,7 @@ class ErrorBuilderTest extends \PHPUnit_Framework_TestCase
         $this->builder->addGlobalError('baz');
 
         $ex = $this->builder->getException();
-        $this->assertInstanceOf('JMS\Payment\CoreBundle\Plugin\Exception\InvalidPaymentInstructionException', $ex);
+        $this->assertInstanceOf('Maestrojosiah\Payment\CoreBundle\Plugin\Exception\InvalidPaymentInstructionException', $ex);
         $this->assertSame(array('foo' => 'bar'), $ex->getDataErrors());
         $this->assertSame(array('baz'), $ex->getGlobalErrors());
     }

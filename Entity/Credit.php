@@ -1,12 +1,12 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Entity;
+namespace Maestrojosiah\Payment\CoreBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use JMS\Payment\CoreBundle\Model\CreditInterface;
-use JMS\Payment\CoreBundle\Model\FinancialTransactionInterface;
-use JMS\Payment\CoreBundle\Model\PaymentInstructionInterface;
-use JMS\Payment\CoreBundle\Model\PaymentInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\CreditInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\FinancialTransactionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInstructionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInterface;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>
@@ -33,17 +33,17 @@ class Credit implements CreditInterface
     private $id;
 
     /**
-     * @var \JMS\Payment\CoreBundle\Entity\Payment
+     * @var \Maestrojosiah\Payment\CoreBundle\Entity\Payment
      */
     private $payment;
 
     /**
-     * @var \JMS\Payment\CoreBundle\Entity\PaymentInstruction
+     * @var \Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction
      */
     private $paymentInstruction;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection|\JMS\Payment\CoreBundle\Entity\FinancialTransaction[]
+     * @var \Doctrine\Common\Collections\ArrayCollection|\Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction[]
      */
     private $transactions;
 
@@ -84,7 +84,7 @@ class Credit implements CreditInterface
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Entity\FinancialTransaction|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction|null
      */
     public function getCreditTransaction()
     {
@@ -103,7 +103,7 @@ class Credit implements CreditInterface
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Entity\Payment
+     * @return \Maestrojosiah\Payment\CoreBundle\Entity\Payment
      */
     public function getPayment()
     {
@@ -111,7 +111,7 @@ class Credit implements CreditInterface
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Entity\PaymentInstruction
+     * @return \Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction
      */
     public function getPaymentInstruction()
     {
@@ -119,7 +119,7 @@ class Credit implements CreditInterface
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Entity\FinancialTransaction|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction|null
      */
     public function getPendingTransaction()
     {
@@ -133,7 +133,7 @@ class Credit implements CreditInterface
     }
 
     /**
-     * @return \Doctrine\Common\Collections\Collection|\JMS\Payment\CoreBundle\Entity\FinancialTransaction[]
+     * @return \Doctrine\Common\Collections\Collection|\Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction[]
      */
     public function getReverseCreditTransactions()
     {

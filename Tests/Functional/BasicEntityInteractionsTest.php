@@ -1,8 +1,8 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Functional;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Functional;
 
-use JMS\Payment\CoreBundle\Entity\PaymentInstruction;
+use Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction;
 
 class BasicEntityInteractionsTest extends BaseTestCase
 {

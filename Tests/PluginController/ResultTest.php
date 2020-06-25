@@ -1,14 +1,14 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\PluginController;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\PluginController;
 
-use JMS\Payment\CoreBundle\Entity\Credit;
-use JMS\Payment\CoreBundle\Entity\ExtendedData;
-use JMS\Payment\CoreBundle\Entity\FinancialTransaction;
-use JMS\Payment\CoreBundle\Entity\Payment;
-use JMS\Payment\CoreBundle\Entity\PaymentInstruction;
-use JMS\Payment\CoreBundle\Plugin\Exception\Exception;
-use JMS\Payment\CoreBundle\PluginController\Result;
+use Maestrojosiah\Payment\CoreBundle\Entity\Credit;
+use Maestrojosiah\Payment\CoreBundle\Entity\ExtendedData;
+use Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction;
+use Maestrojosiah\Payment\CoreBundle\Entity\Payment;
+use Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction;
+use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\Exception;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Result;
 
 class ResultTest extends \PHPUnit_Framework_TestCase
 {

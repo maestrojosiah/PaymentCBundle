@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\BrowserKit;
+namespace Maestrojosiah\Payment\CoreBundle\BrowserKit;
 
 use Symfony\Component\HttpFoundation\HeaderBag;
 use Symfony\Component\HttpFoundation\ParameterBag;

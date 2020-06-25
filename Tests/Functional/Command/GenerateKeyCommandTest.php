@@ -1,10 +1,10 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Command;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Command;
 
-use JMS\Payment\CoreBundle\Command\GenerateKeyCommand;
-use JMS\Payment\CoreBundle\Cryptography\DefusePhpEncryptionService;
-use JMS\Payment\CoreBundle\Tests\Functional\BaseTestCase;
+use Maestrojosiah\Payment\CoreBundle\Command\GenerateKeyCommand;
+use Maestrojosiah\Payment\CoreBundle\Cryptography\DefusePhpEncryptionService;
+use Maestrojosiah\Payment\CoreBundle\Tests\Functional\BaseTestCase;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 
@@ -17,7 +17,7 @@ class GenerateKeyCommandTest extends BaseTestCase
         $application = new Application(self::$kernel);
         $application->add(new GenerateKeyCommand());
 
-        $this->command = $application->find('jms_payment_core:generate-key');
+        $this->command = $application->find('maestrojosiah_payment_core:generate-key');
 
         parent::setUp();
     }

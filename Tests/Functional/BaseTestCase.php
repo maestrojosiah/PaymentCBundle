@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Functional;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Functional;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\Filesystem\Filesystem;
@@ -26,7 +26,7 @@ class BaseTestCase extends WebTestCase
     protected function setUp()
     {
         $fs = new Filesystem();
-        $fs->remove(sys_get_temp_dir().'/JMSPaymentCoreBundle/');
+        $fs->remove(sys_get_temp_dir().'/MaestrojosiahPaymentCoreBundle/');
     }
 
     protected function importDatabaseSchema()

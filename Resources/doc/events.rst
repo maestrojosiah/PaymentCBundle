@@ -9,7 +9,7 @@ PaymentInstruction State Change Event
 -------------------------------------
 **Name**: ``payment_instruction.state_change``
 
-**Class**: ``JMS\Payment\CoreBundle\PluginController\Event\PaymentInstructionStateChangeEvent``
+**Class**: ``Maestrojosiah\Payment\CoreBundle\PluginController\Event\PaymentInstructionStateChangeEvent``
 
 This event is dispatched after the state of a payment instruction changes.
 
@@ -20,7 +20,7 @@ Payment State Change Event
 --------------------------
 **Name**: ``payment.state_change``
 
-**Class**: ``JMS\Payment\CoreBundle\PluginController\Event\PaymentStateChangeEvent``
+**Class**: ``Maestrojosiah\Payment\CoreBundle\PluginController\Event\PaymentStateChangeEvent``
 
 This event is dispatched directly after the state of a payment changed. All related entities have already been updated.
 

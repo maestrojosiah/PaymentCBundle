@@ -1,8 +1,8 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Plugin;
+namespace Maestrojosiah\Payment\CoreBundle\Plugin;
 
-use JMS\Payment\CoreBundle\Plugin\Exception\InvalidPaymentInstructionException;
+use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\InvalidPaymentInstructionException;
 
 /**
  * Convenience class for building up error messages.

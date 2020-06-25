@@ -1,10 +1,10 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Validator;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Validator;
 
-use JMS\Payment\CoreBundle\Util\Legacy;
-use JMS\Payment\CoreBundle\Validator\Luhn;
-use JMS\Payment\CoreBundle\Validator\LuhnValidator;
+use Maestrojosiah\Payment\CoreBundle\Util\Legacy;
+use Maestrojosiah\Payment\CoreBundle\Validator\Luhn;
+use Maestrojosiah\Payment\CoreBundle\Validator\LuhnValidator;
 
 class LuhnValidatorTest extends \PHPUnit_Framework_TestCase
 {

@@ -17,10 +17,10 @@ public function someAction($id)
 }
 ```
 
-you should instead inject `JMS\Payment\CoreBundle\PluginController\PluginController` into your controller actions:
+you should instead inject `Maestrojosiah\Payment\CoreBundle\PluginController\PluginController` into your controller actions:
 
 ```php
-use JMS\Payment\CoreBundle\PluginController\PluginController;
+use Maestrojosiah\Payment\CoreBundle\PluginController\PluginController;
 
 public function someAction($id, PluginController $ppc)
 {
@@ -35,10 +35,10 @@ public function someAction($id, PluginController $ppc)
 
 ## [1.3.0] - 2017-01-22
 ### Changed
-- `JMS\Payment\CoreBundle\Model\ExtendedDataInterface` has changed. If any of your classes implement this interface, you need to update them accordingly:
+- `Maestrojosiah\Payment\CoreBundle\Model\ExtendedDataInterface` has changed. If any of your classes implement this interface, you need to update them accordingly:
     - Added missing `mayBePersisted` method
     - Added missing `$persist` parameter to `set` method
-- `JMS\Payment\CoreBundle\EntityExtendedDataType::convertToDatabaseValue` now throws an exception when attempting to convert an object which does not implement `JMS\Payment\CoreBundle\Model\ExtendedDataInterface`.
+- `Maestrojosiah\Payment\CoreBundle\EntityExtendedDataType::convertToDatabaseValue` now throws an exception when attempting to convert an object which does not implement `Maestrojosiah\Payment\CoreBundle\Model\ExtendedDataInterface`.
 - Encryption is now optional and disabled by default, unless the `secret` or `encryption.secret` configuration options are set.
 - `defuse_php_encryption` is now the default encryption provider, unless when using the `secret` configuration option, in which case the default is set to `mcrypt`.
 - The EntityManager is no longer closed when an Exception is thrown (#145)
@@ -46,10 +46,10 @@ public function someAction($id, PluginController $ppc)
 ### Deprecated
 - The service `payment.encryption_service` has been deprecated and is now an alias to `payment.encryption.mcrypt`. Parameters specified for `payment.encryption_service` are automatically set for `payment.encryption.mcrypt` so no changes are required in service configuration until `payment.encryption_service` is removed in 2.0.
 - The `secret` configuration option has been deprecated in favor of `encryption.secret` and will be removed in 2.0. Please note that if you start using `encryption.secret` you also need to set `encryption.provider` to `mcrypt` since mcrypt is not the default when using the `encryption.*` options.
-- `JMS\Payment\CoreBundle\Cryptography\MCryptEncryptionService` has been deprecated and will be removed in 2.0 (`mcrypt` has been deprecated in PHP 7.1 and is removed in PHP 7.2). Refer to http://jmspaymentcorebundle.readthedocs.io/en/stable/guides/mcrypt.html for instructions on how to migrate away from `mcrypt`.
+- `Maestrojosiah\Payment\CoreBundle\Cryptography\MCryptEncryptionService` has been deprecated and will be removed in 2.0 (`mcrypt` has been deprecated in PHP 7.1 and is removed in PHP 7.2). Refer to http://maestrojosiahpaymentcorebundle.readthedocs.io/en/stable/guides/mcrypt.html for instructions on how to migrate away from `mcrypt`.
 
 ### Added
-- Added ``method_options`` and ``choice_options`` to form. See the [documentation](http://jmspaymentcorebundle.readthedocs.io/en/stable/payment_form.html#choice-options) for more information.
+- Added ``method_options`` and ``choice_options`` to form. See the [documentation](http://maestrojosiahpaymentcorebundle.readthedocs.io/en/stable/payment_form.html#choice-options) for more information.
 - Added a guides section to the documentation
 - Added support for custom encryption providers.
 - Added support for data encryption with [defuse/php-encryption](https://github.com/defuse/php-encryption).

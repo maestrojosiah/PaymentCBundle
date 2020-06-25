@@ -1,8 +1,8 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Plugin;
+namespace Maestrojosiah\Payment\CoreBundle\Plugin;
 
-use JMS\Payment\CoreBundle\Model\FinancialTransactionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\FinancialTransactionInterface;
 
 /**
  * Successful transaction plugin.

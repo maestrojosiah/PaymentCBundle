@@ -1,11 +1,11 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Form;
+namespace Maestrojosiah\Payment\CoreBundle\Form;
 
-use JMS\Payment\CoreBundle\Form\Transformer\ChoosePaymentMethodTransformer;
-use JMS\Payment\CoreBundle\PluginController\PluginControllerInterface;
-use JMS\Payment\CoreBundle\PluginController\Result;
-use JMS\Payment\CoreBundle\Util\Legacy;
+use Maestrojosiah\Payment\CoreBundle\Form\Transformer\ChoosePaymentMethodTransformer;
+use Maestrojosiah\Payment\CoreBundle\PluginController\PluginControllerInterface;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Result;
+use Maestrojosiah\Payment\CoreBundle\Util\Legacy;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -30,7 +30,7 @@ class ChoosePaymentMethodType extends AbstractType
     public function __construct(PluginControllerInterface $pluginController, array $paymentMethods)
     {
         if (!$paymentMethods) {
-            throw new \InvalidArgumentException('There is no payment method available. Did you forget to register concrete payment provider bundles such as JMSPaymentPaypalBundle?');
+            throw new \InvalidArgumentException('There is no payment method available. Did you forget to register concrete payment provider bundles such as MaestrojosiahPaymentPaypalBundle?');
         }
 
         $this->pluginController = $pluginController;
@@ -175,7 +175,7 @@ class ChoosePaymentMethodType extends AbstractType
 
     public function getBlockPrefix()
     {
-        return 'jms_choose_payment_method';
+        return 'maestrojosiah_choose_payment_method';
     }
 
     /**

@@ -1,8 +1,8 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\PluginController\Exception;
+namespace Maestrojosiah\Payment\CoreBundle\PluginController\Exception;
 
-use JMS\Payment\CoreBundle\Exception\Exception as PaymentBundleException;
+use Maestrojosiah\Payment\CoreBundle\Exception\Exception as PaymentBundleException;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>

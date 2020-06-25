@@ -1,8 +1,8 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Plugin;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Plugin;
 
-use JMS\Payment\CoreBundle\BrowserKit\Request;
+use Maestrojosiah\Payment\CoreBundle\BrowserKit\Request;
 
 class GatewayPluginTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,7 +15,7 @@ class GatewayPluginTest extends \PHPUnit_Framework_TestCase
         $plugin = $this->getPlugin();
 
         // not sure if there is a better approach to testing this
-        $request = new Request('https://raw.githubusercontent.com/schmittjoh/JMSPaymentCoreBundle/master/Tests/Plugin/Fixtures/sampleResponse', 'GET');
+        $request = new Request('https://raw.githubusercontent.com/schmittjoh/MaestrojosiahPaymentCoreBundle/master/Tests/Plugin/Fixtures/sampleResponse', 'GET');
         $response = $plugin->request($request);
 
         $this->assertEquals(file_get_contents(__DIR__.'/Fixtures/sampleResponse'), $response->getContent());
@@ -24,6 +24,6 @@ class GatewayPluginTest extends \PHPUnit_Framework_TestCase
 
     protected function getPlugin()
     {
-        return $this->getMockForAbstractClass('JMS\Payment\CoreBundle\Plugin\GatewayPlugin', array(true));
+        return $this->getMockForAbstractClass('Maestrojosiah\Payment\CoreBundle\Plugin\GatewayPlugin', array(true));
     }
 }

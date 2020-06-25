@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Model;
+namespace Maestrojosiah\Payment\CoreBundle\Model;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>

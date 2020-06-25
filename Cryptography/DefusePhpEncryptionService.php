@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Cryptography;
+namespace Maestrojosiah\Payment\CoreBundle\Cryptography;
 
 use Defuse\Crypto\Crypto;
 use Defuse\Crypto\Key;

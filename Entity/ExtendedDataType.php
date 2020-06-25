@@ -1,12 +1,12 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Entity;
+namespace Maestrojosiah\Payment\CoreBundle\Entity;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\ConversionException;
 use Doctrine\DBAL\Types\ObjectType;
-use JMS\Payment\CoreBundle\Cryptography\EncryptionServiceInterface;
-use JMS\Payment\CoreBundle\Model\ExtendedDataInterface;
+use Maestrojosiah\Payment\CoreBundle\Cryptography\EncryptionServiceInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\ExtendedDataInterface;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>
@@ -48,7 +48,7 @@ class ExtendedDataType extends ObjectType
 
         if (!$extendedData instanceof ExtendedDataInterface) {
             throw new \InvalidArgumentException(
-                '$extendedData must implement JMS\Payment\CoreBundle\Model\ExtendedDataInterface'
+                '$extendedData must implement Maestrojosiah\Payment\CoreBundle\Model\ExtendedDataInterface'
             );
         }
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Validator;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Validator;
 
-use JMS\Payment\CoreBundle\Util\Legacy;
-use JMS\Payment\CoreBundle\Validator\CardScheme;
-use JMS\Payment\CoreBundle\Validator\CardSchemeValidator;
+use Maestrojosiah\Payment\CoreBundle\Util\Legacy;
+use Maestrojosiah\Payment\CoreBundle\Validator\CardScheme;
+use Maestrojosiah\Payment\CoreBundle\Validator\CardSchemeValidator;
 
 class CardSchemeValidatorTest extends \PHPUnit_Framework_TestCase
 {

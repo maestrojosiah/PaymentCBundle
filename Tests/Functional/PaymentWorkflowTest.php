@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Functional;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Functional;
 
 class PaymentWorkflowTest extends BasePaymentWorkflowTest
 {

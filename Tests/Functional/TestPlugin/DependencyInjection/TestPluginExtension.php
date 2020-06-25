@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Functional\TestPlugin\DependencyInjection;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Functional\TestPlugin\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

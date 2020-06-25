@@ -17,7 +17,7 @@ When creating the form you need to specify at least the ``amount`` and ``currenc
 
     // src/App/Controller/OrdersController.php
 
-    use JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType;
+    use Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType;
 
     $form = $this->createForm(ChoosePaymentMethodType::class, null, [
         'amount'   => '10.42',
@@ -32,7 +32,7 @@ When creating the form you need to specify at least the ``amount`` and ``currenc
 
         // src/App/Controller/OrdersController.php
 
-        $form = $this->createForm('jms_choose_payment_method', null, [
+        $form = $this->createForm('maestrojosiah_choose_payment_method', null, [
             'amount'   => '10.42',
             'currency' => 'EUR',
         ]);
@@ -79,11 +79,11 @@ When the form only has one available payment method (either because only one pay
     {# templates/Orders/theme.html.twig #}
 
     {# Don't render the radio button's label #}
-    {% block _jms_choose_payment_method_method_label %}
+    {% block _maestrojosiah_choose_payment_method_method_label %}
     {% endblock %}
 
     {# Hide each entry in the radio button #}
-    {% block _jms_choose_payment_method_method_widget %}
+    {% block _maestrojosiah_choose_payment_method_method_widget %}
         <div style="display: none;">
             {{ parent() }}
         </div>
@@ -105,7 +105,7 @@ The amount (i.e. total price) of the payment.
 
     // src/App/Controller/OrdersController.php
 
-    use JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType;
+    use Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType;
 
     $form = $this->createForm(ChoosePaymentMethodType::class, null, [
         'amount'   => '10.42',
@@ -118,8 +118,8 @@ You might want to add extra costs for a specific payment method. You can impleme
 
     // src/App/Controller/OrdersController.php
 
-    use JMS\Payment\CoreBundle\Entity\ExtendedData;
-    use JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType;
+    use Maestrojosiah\Payment\CoreBundle\Entity\ExtendedData;
+    use Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType;
 
     $amount = '10.42';
 
@@ -146,7 +146,7 @@ The three-letter currency code, i.e. ``EUR`` or ``USD``.
 
     // src/App/Controller/OrdersController.php
 
-    use JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType;
+    use Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType;
 
     $form = $this->createForm(ChoosePaymentMethodType::class, null, [
         'amount'   => '10.42',
@@ -167,7 +167,7 @@ As an example, if we would be using the Stripe plugin, we would need to provide 
 
     // src/App/Controller/OrdersController.php
 
-    use JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType;
+    use Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType;
 
     $predefinedData = [
         'stripe_checkout' => [
@@ -204,7 +204,7 @@ In case you wish to constrain the methods presented to the user, use the ``allow
 
     // src/App/Controller/OrdersController.php
 
-    use JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType;
+    use Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType;
 
     $form = $this->createForm(ChoosePaymentMethodType::class, null, [
         'amount'          => '10.42',
@@ -228,7 +228,7 @@ If you wish to set a default payment method, you can use the ``default_method`` 
 
     // src/App/Controller/OrdersController.php
 
-    use JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType;
+    use Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType;
 
     $form = $this->createForm(ChoosePaymentMethodType::class, null, [
         'amount'          => '10.42',
@@ -250,7 +250,7 @@ For example, to display a select instead of a radio button, set the ``expanded``
 
     // src/App/Controller/OrdersController.php
 
-    use JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType;
+    use Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType;
 
     $form = $this->createForm(ChoosePaymentMethodType::class, null, [
         'amount'         => '10.42',
@@ -272,7 +272,7 @@ Pass options to each payment method's form type. For example, to hide the main l
 
     // src/App/Controller/OrdersController.php
 
-    use JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType;
+    use Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType;
 
     $form = $this->createForm(ChoosePaymentMethodType::class, null, [
         'amount'         => '10.42',

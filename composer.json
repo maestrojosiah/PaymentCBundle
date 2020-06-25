@@ -1,9 +1,9 @@
 {
-    "name": "jms/paymentcbundle",
+    "name": "maestrojosiah/paymentcbundle",
     "type": "symfony-bundle",
     "description": "A unified API for processing payments with Symfony",
     "keywords": ["payment"],
-    "homepage": "http://jmspaymentcorebundle.readthedocs.io",
+    "homepage": "http://maestrojosiahpaymentcorebundle.readthedocs.io",
     "license": "Apache2",
     "authors": [
         {
@@ -16,7 +16,7 @@
         },
         {
             "name": "Contributors",
-            "homepage": "https://github.com/schmittjoh/JMSPaymentCoreBundle/contributors"
+            "homepage": "https://github.com/schmittjoh/MaestrojosiahPaymentCoreBundle/contributors"
         }
     ],
     "require": {
@@ -52,9 +52,9 @@
 
     },
     "autoload": {
-        "psr-0": { "JMS\\Payment\\CoreBundle": "" }
+        "psr-0": { "Maestrojosiah\\Payment\\CoreBundle": "" }
     },
-    "target-dir": "JMS/Payment/CoreBundle",
+    "target-dir": "Maestrojosiah/Payment/CoreBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "1.4-dev"

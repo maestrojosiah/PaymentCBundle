@@ -1,10 +1,10 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Functional\TestBundle\Controller;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Functional\TestBundle\Controller;
 
-use JMS\Payment\CoreBundle\PluginController\PluginController;
-use JMS\Payment\CoreBundle\Tests\Functional\TestBundle\Entity\Order;
-use JMS\Payment\CoreBundle\Util\Legacy;
+use Maestrojosiah\Payment\CoreBundle\PluginController\PluginController;
+use Maestrojosiah\Payment\CoreBundle\Tests\Functional\TestBundle\Entity\Order;
+use Maestrojosiah\Payment\CoreBundle\Util\Legacy;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -31,8 +31,8 @@ class OrderController extends AbstractController
         $order = $this->getDoctrine()->getManager()->getRepository(Order::class)->find($orderId);
 
         $formType = Legacy::supportsFormTypeClass()
-            ? 'JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType'
-            : 'jms_choose_payment_method'
+            ? 'Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType'
+            : 'maestrojosiah_choose_payment_method'
         ;
 
         $form = $this->get('form.factory')->create($formType, null, array(

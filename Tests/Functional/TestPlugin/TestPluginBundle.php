@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Functional\TestPlugin;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Functional\TestPlugin;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

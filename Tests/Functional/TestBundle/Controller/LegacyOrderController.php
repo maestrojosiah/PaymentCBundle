@@ -1,9 +1,9 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Functional\TestBundle\Controller;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Functional\TestBundle\Controller;
 
-use JMS\Payment\CoreBundle\Tests\Functional\TestBundle\Entity\Order;
-use JMS\Payment\CoreBundle\Util\Legacy;
+use Maestrojosiah\Payment\CoreBundle\Tests\Functional\TestBundle\Entity\Order;
+use Maestrojosiah\Payment\CoreBundle\Util\Legacy;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\FormFactory;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,8 +15,8 @@ class LegacyOrderController extends Controller
         $order = $this->getDoctrine()->getManager()->getRepository(Order::class)->find($orderId);
 
         $formType = Legacy::supportsFormTypeClass()
-            ? 'JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType'
-            : 'jms_choose_payment_method'
+            ? 'Maestrojosiah\Payment\CoreBundle\Form\ChoosePaymentMethodType'
+            : 'maestrojosiah_choose_payment_method'
         ;
 
         /** @var FormFactory $formFactory */

@@ -1,12 +1,12 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Entity;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Entity;
 
-use JMS\Payment\CoreBundle\Entity\Credit;
-use JMS\Payment\CoreBundle\Entity\ExtendedData;
-use JMS\Payment\CoreBundle\Entity\FinancialTransaction;
-use JMS\Payment\CoreBundle\Entity\Payment;
-use JMS\Payment\CoreBundle\Entity\PaymentInstruction;
+use Maestrojosiah\Payment\CoreBundle\Entity\Credit;
+use Maestrojosiah\Payment\CoreBundle\Entity\ExtendedData;
+use Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction;
+use Maestrojosiah\Payment\CoreBundle\Entity\Payment;
+use Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction;
 
 class PaymentInstructionTest extends \PHPUnit_Framework_TestCase
 {

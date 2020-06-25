@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\PluginController\Event;
+namespace Maestrojosiah\Payment\CoreBundle\PluginController\Event;
 
 abstract class Events
 {

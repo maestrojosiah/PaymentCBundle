@@ -1,28 +1,28 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\PluginController;
+namespace Maestrojosiah\Payment\CoreBundle\PluginController;
 
-use JMS\Payment\CoreBundle\Model\CreditInterface;
-use JMS\Payment\CoreBundle\Model\FinancialTransactionInterface;
-use JMS\Payment\CoreBundle\Model\PaymentInstructionInterface;
-use JMS\Payment\CoreBundle\Model\PaymentInterface;
-use JMS\Payment\CoreBundle\Plugin\Exception\ActionRequiredException as PluginActionRequiredException;
-use JMS\Payment\CoreBundle\Plugin\Exception\BlockedException as PluginBlockedException;
-use JMS\Payment\CoreBundle\Plugin\Exception\FinancialException as PluginFinancialException;
-use JMS\Payment\CoreBundle\Plugin\Exception\FunctionNotSupportedException as PluginFunctionNotSupportedException;
-use JMS\Payment\CoreBundle\Plugin\Exception\InvalidPaymentInstructionException as PluginInvalidPaymentInstructionException;
-use JMS\Payment\CoreBundle\Plugin\Exception\TimeoutException as PluginTimeoutException;
-use JMS\Payment\CoreBundle\Plugin\PluginInterface;
-use JMS\Payment\CoreBundle\Plugin\QueryablePluginInterface;
-use JMS\Payment\CoreBundle\PluginController\Event\Events;
-use JMS\Payment\CoreBundle\PluginController\Event\PaymentInstructionStateChangeEvent;
-use JMS\Payment\CoreBundle\PluginController\Event\PaymentStateChangeEvent;
-use JMS\Payment\CoreBundle\PluginController\Exception\Exception;
-use JMS\Payment\CoreBundle\PluginController\Exception\InvalidCreditException;
-use JMS\Payment\CoreBundle\PluginController\Exception\InvalidPaymentException;
-use JMS\Payment\CoreBundle\PluginController\Exception\InvalidPaymentInstructionException;
-use JMS\Payment\CoreBundle\PluginController\Exception\PluginNotFoundException;
-use JMS\Payment\CoreBundle\Util\Number;
+use Maestrojosiah\Payment\CoreBundle\Model\CreditInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\FinancialTransactionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInstructionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInterface;
+use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\ActionRequiredException as PluginActionRequiredException;
+use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\BlockedException as PluginBlockedException;
+use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\FinancialException as PluginFinancialException;
+use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\FunctionNotSupportedException as PluginFunctionNotSupportedException;
+use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\InvalidPaymentInstructionException as PluginInvalidPaymentInstructionException;
+use Maestrojosiah\Payment\CoreBundle\Plugin\Exception\TimeoutException as PluginTimeoutException;
+use Maestrojosiah\Payment\CoreBundle\Plugin\PluginInterface;
+use Maestrojosiah\Payment\CoreBundle\Plugin\QueryablePluginInterface;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Event\Events;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Event\PaymentInstructionStateChangeEvent;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Event\PaymentStateChangeEvent;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Exception\Exception;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Exception\InvalidCreditException;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Exception\InvalidPaymentException;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Exception\InvalidPaymentInstructionException;
+use Maestrojosiah\Payment\CoreBundle\PluginController\Exception\PluginNotFoundException;
+use Maestrojosiah\Payment\CoreBundle\Util\Number;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 /*

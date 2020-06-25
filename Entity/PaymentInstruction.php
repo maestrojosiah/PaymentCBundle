@@ -1,9 +1,9 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Entity;
+namespace Maestrojosiah\Payment\CoreBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use JMS\Payment\CoreBundle\Model\PaymentInstructionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInstructionInterface;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>
@@ -32,7 +32,7 @@ class PaymentInstruction implements PaymentInstructionInterface
     private $creditingAmount;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection|\JMS\Payment\CoreBundle\Entity\Credit[]
+     * @var \Doctrine\Common\Collections\ArrayCollection|\Maestrojosiah\Payment\CoreBundle\Entity\Credit[]
      */
     private $credits;
 
@@ -41,19 +41,19 @@ class PaymentInstruction implements PaymentInstructionInterface
     private $depositingAmount;
 
     /**
-     * @var \JMS\Payment\CoreBundle\Entity\ExtendedData
+     * @var \Maestrojosiah\Payment\CoreBundle\Entity\ExtendedData
      */
     private $extendedData;
 
     /**
-     * @var \JMS\Payment\CoreBundle\Entity\ExtendedData
+     * @var \Maestrojosiah\Payment\CoreBundle\Entity\ExtendedData
      */
     private $extendedDataOriginal;
 
     private $id;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection|\JMS\Payment\CoreBundle\Entity\Payment[]
+     * @var \Doctrine\Common\Collections\ArrayCollection|\Maestrojosiah\Payment\CoreBundle\Entity\Payment[]
      */
     private $payments;
 
@@ -138,7 +138,7 @@ class PaymentInstruction implements PaymentInstructionInterface
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Entity\ExtendedData
+     * @return \Maestrojosiah\Payment\CoreBundle\Entity\ExtendedData
      */
     public function getExtendedData()
     {
@@ -186,7 +186,7 @@ class PaymentInstruction implements PaymentInstructionInterface
     }
 
     /**
-     * @return \Doctrine\Common\Collections\ArrayCollection|\JMS\Payment\CoreBundle\Entity\Credit[]
+     * @return \Doctrine\Common\Collections\ArrayCollection|\Maestrojosiah\Payment\CoreBundle\Entity\Credit[]
      */
     public function getCredits()
     {
@@ -194,7 +194,7 @@ class PaymentInstruction implements PaymentInstructionInterface
     }
 
     /**
-     * @return \Doctrine\Common\Collections\ArrayCollection|\JMS\Payment\CoreBundle\Entity\Payment[]
+     * @return \Doctrine\Common\Collections\ArrayCollection|\Maestrojosiah\Payment\CoreBundle\Entity\Payment[]
      */
     public function getPayments()
     {
@@ -202,7 +202,7 @@ class PaymentInstruction implements PaymentInstructionInterface
     }
 
     /**
-     * @return \JMS\Payment\CoreBundle\Entity\FinancialTransaction|null
+     * @return \Maestrojosiah\Payment\CoreBundle\Entity\FinancialTransaction|null
      */
     public function getPendingTransaction()
     {

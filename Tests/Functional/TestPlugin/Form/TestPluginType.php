@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Functional\TestPlugin\Form;
+namespace Maestrojosiah\Payment\CoreBundle\Tests\Functional\TestPlugin\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

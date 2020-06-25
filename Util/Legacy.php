@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Util;
+namespace Maestrojosiah\Payment\CoreBundle\Util;
 
 use Symfony\Component\HttpKernel\Kernel;
 

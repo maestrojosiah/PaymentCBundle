@@ -7,7 +7,7 @@ Install with composer:
 
 .. code-block :: bash
 
-    composer require jms/paymentcbundle
+    composer require maestrojosiah/paymentcbundle
 
 Configuration
 -------------
@@ -15,14 +15,14 @@ The configuration is as simple as setting an encryption key which will be used f
 
 .. code-block :: bash
 
-    bin/console jms_payment_core:generate-key
+    bin/console maestrojosiah_payment_core:generate-key
 
 And then use it in your configuration:
 
 .. code-block :: yaml
 
     # config/packages/payment.yaml
-    jms_payment_core:
+    maestrojosiah_payment_core:
         encryption:
             secret: output_of_above_command
 
@@ -66,7 +66,7 @@ Or, if you're using migrations:
         doctrine:
             orm:
                 mappings:
-                    JMSPaymentCoreBundle: ~
+                    MaestrojosiahPaymentCoreBundle: ~
 
 .. _setup-configure-plugin:
 
@@ -78,11 +78,11 @@ In addition to setting up this bundle, you will also need to install a *plugin* 
 
     See :doc:`Available payment backends <backends>` for the list of existing plugins.
 
-Using the `Paypal plugin <https://github.com/schmittjoh/JMSPaymentPaypalBundle>`_ as an example, you would install it with composer:
+Using the `Paypal plugin <https://github.com/schmittjoh/MaestrojosiahPaymentPaypalBundle>`_ as an example, you would install it with composer:
 
 .. code-block :: bash
 
-    composer require jms/payment-paypal-bundle
+    composer require maestrojosiah/payment-paypal-bundle
 
 And configure it:
 
@@ -90,7 +90,7 @@ And configure it:
 
     # config/packages/payment.yaml
 
-    jms_payment_paypal:
+    maestrojosiah_payment_paypal:
         username: your api username
         password: your api password
         signature: your api signature

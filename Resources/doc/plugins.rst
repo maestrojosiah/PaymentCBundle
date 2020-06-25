@@ -8,7 +8,7 @@ The easiest way is to simply extend the provided ``AbstractPlugin`` class, and o
 
 .. code-block :: php
 
-    use JMS\Payment\CoreBundle\Plugin\AbstractPlugin;
+    use Maestrojosiah\Payment\CoreBundle\Plugin\AbstractPlugin;
 
     class PaypalPlugin extends AbstractPlugin
     {
@@ -79,7 +79,7 @@ Following is a list with available exceptions, and how they are treated by the `
 
 .. tip ::
 
-    All exceptions which are relevant for plugins are located in the namespace ``JMS\Payment\CoreBundle\Plugin\Exception``.
+    All exceptions which are relevant for plugins are located in the namespace ``Maestrojosiah\Payment\CoreBundle\Plugin\Exception``.
 
 +------------------------------------+-----------------------------+---------------------------+
 | Class                              | Description                 | Payment Plugin Controller |
@@ -201,9 +201,9 @@ We are now going to implement the ``checkPaymentInstruction`` method for our for
 
 .. code-block :: php
 
-    use JMS\Payment\CoreBundle\Plugin\AbstractPlugin;
-    use JMS\Payment\CoreBundle\Model\PaymentInstructionInterface;
-    use JMS\Payment\CoreBundle\Plugin\ErrorBuilder;
+    use Maestrojosiah\Payment\CoreBundle\Plugin\AbstractPlugin;
+    use Maestrojosiah\Payment\CoreBundle\Model\PaymentInstructionInterface;
+    use Maestrojosiah\Payment\CoreBundle\Plugin\ErrorBuilder;
 
     class CreditCardPlugin extends AbstractPlugin
     {

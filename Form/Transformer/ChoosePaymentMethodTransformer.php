@@ -1,9 +1,9 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Form\Transformer;
+namespace Maestrojosiah\Payment\CoreBundle\Form\Transformer;
 
-use JMS\Payment\CoreBundle\Entity\ExtendedData;
-use JMS\Payment\CoreBundle\Entity\PaymentInstruction;
+use Maestrojosiah\Payment\CoreBundle\Entity\ExtendedData;
+use Maestrojosiah\Payment\CoreBundle\Entity\PaymentInstruction;
 use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\Exception\TransformationFailedException;
 

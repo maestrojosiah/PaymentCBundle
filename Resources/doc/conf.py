@@ -8,7 +8,7 @@ import sphinx_rtd_theme
 from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
 
-project = u'JMSPaymentCoreBundle'
+project = u'MaestrojosiahPaymentCoreBundle'
 
 extensions = [
     'sensio.sphinx.configurationblock',

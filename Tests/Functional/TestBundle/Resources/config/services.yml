@@ -3,5 +3,5 @@ services:
     autowire: true
     autoconfigure: true
 
-  JMS\Payment\CoreBundle\Tests\Functional\TestBundle\Controller\OrderController:
+  Maestrojosiah\Payment\CoreBundle\Tests\Functional\TestBundle\Controller\OrderController:
     tags: ['controller.service_arguments']

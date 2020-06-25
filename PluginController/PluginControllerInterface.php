@@ -1,10 +1,10 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\PluginController;
+namespace Maestrojosiah\Payment\CoreBundle\PluginController;
 
-use JMS\Payment\CoreBundle\Model\CreditInterface;
-use JMS\Payment\CoreBundle\Model\PaymentInstructionInterface;
-use JMS\Payment\CoreBundle\Model\PaymentInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\CreditInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInstructionInterface;
+use Maestrojosiah\Payment\CoreBundle\Model\PaymentInterface;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>
@@ -73,7 +73,7 @@ interface PluginControllerInterface
      * - rollback the transaction
      * - not persist any changes in the database
      *
-     * @throws JMS\Payment\CoreBundle\PluginController\Exception\InvalidPaymentInstructionException if the PaymentInstruction is not in the desired state
+     * @throws Maestrojosiah\Payment\CoreBundle\PluginController\Exception\InvalidPaymentInstructionException if the PaymentInstruction is not in the desired state
      *
      * @param int   $paymentId
      * @param float $amount

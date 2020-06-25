@@ -1,12 +1,12 @@
 <?php
 
-namespace JMS\Payment\CoreBundle;
+namespace Maestrojosiah\Payment\CoreBundle;
 
-use JMS\Payment\CoreBundle\DependencyInjection\Compiler\AddPaymentMethodFormTypesPass;
-use JMS\Payment\CoreBundle\DependencyInjection\Compiler\AddPaymentPluginsPass;
-use JMS\Payment\CoreBundle\DependencyInjection\Compiler\ConfigureEncryptionPass;
-use JMS\Payment\CoreBundle\DependencyInjection\Compiler\LegacyEncryptionPass;
-use JMS\Payment\CoreBundle\Entity\ExtendedDataType;
+use Maestrojosiah\Payment\CoreBundle\DependencyInjection\Compiler\AddPaymentMethodFormTypesPass;
+use Maestrojosiah\Payment\CoreBundle\DependencyInjection\Compiler\AddPaymentPluginsPass;
+use Maestrojosiah\Payment\CoreBundle\DependencyInjection\Compiler\ConfigureEncryptionPass;
+use Maestrojosiah\Payment\CoreBundle\DependencyInjection\Compiler\LegacyEncryptionPass;
+use Maestrojosiah\Payment\CoreBundle\Entity\ExtendedDataType;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -26,7 +26,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * limitations under the License.
  */
 
-class JMSPaymentCoreBundle extends Bundle
+class MaestrojosiahPaymentCoreBundle extends Bundle
 {
     public function boot()
     {
