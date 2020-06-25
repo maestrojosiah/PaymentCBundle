@@ -1,0 +1,5 @@
+imports:
+    - { resource: default.php }
+
+jms_payment_core:
+    secret: test
