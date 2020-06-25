@@ -7,17 +7,10 @@
     "license": "Apache2",
     "authors": [
         {
-            "name": "Johannes M. Schmitt",
-            "email": "schmittjoh@gmail.com"
+            "name": "Josiah Birai",
+            "email": "maestrojosiah@gmail.com"
         },
-        {
-            "name": "Paulo Rodrigues Pinto",
-            "email": "regularjack@gmail.com"
-        },
-        {
-            "name": "Contributors",
-            "homepage": "https://github.com/schmittjoh/MaestrojosiahPaymentCoreBundle/contributors"
-        }
+        
     ],
     "require": {
         "php": ">=5.6",
