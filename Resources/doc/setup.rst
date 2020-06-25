@@ -7,7 +7,7 @@ Install with composer:
 
 .. code-block :: bash
 
-    composer require jms/payment-core-bundle
+    composer require jms/paymentcbundle
 
 Configuration
 -------------

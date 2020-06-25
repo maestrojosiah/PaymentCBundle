@@ -17,7 +17,7 @@ Start by copying the mapping files from this bundle to your application:
 
     cd my-app
     mkdir -p config/packages/JMSPaymentCoreBundle
-    cp vendor/jms/payment-core-bundle/JMS/Payment/CoreBundle/Resources/config/doctrine/* config/packages/JMSPaymentCoreBundle/
+    cp vendor/jms/maymentcbundle/JMS/Payment/CoreBundle/Resources/config/doctrine/* config/packages/JMSPaymentCoreBundle/
 
 You now have a copy of the following mapping files under ``config/packages/JMSPaymentCoreBundle``:
 
